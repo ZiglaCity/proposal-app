@@ -58,7 +58,6 @@ def move_button(event):
 
 
 def Yes():
-    # Destroy all widgets in the root window
     for widget in root.winfo_children():
         widget.destroy()
 
@@ -90,10 +89,10 @@ def create_gui():
 
 
     yes_button = tk.Button(root, text="YES!", command=Yes)
-    yes_button.pack(padx=20)
+    yes_button.pack(pady=20)
   
     no_button = tk.Button(root, text="NO!")
-    no_button.pack(padx=20)
+    no_button.pack(pady=10)
 
     no_button.bind("<Enter>", move_button)
 
