@@ -55,6 +55,21 @@ def move_button(event):
 
     no_button.place(x=n, y=m)
 
+
+def Yes():
+    # Destroy all widgets in the root window
+    for widget in root.winfo_children():
+        widget.destroy()
+
+    thanks_label = tk.Label(root, text="AWWW... THANKS! I LOVE YOU TOO❤")
+    thanks_label.pack(pady=100)
+
+    exit_button = tk.Button(root, text="EXIT", command=Exit)
+    exit_button.pack(pady=50, padx=30)
+
+    apply_styles(root)
+
+
 def create_gui():
     global root, no_button 
     root = tk.Tk()
@@ -74,6 +89,9 @@ def create_gui():
   
     no_button = tk.Button(root, text="NO!")
     no_button.pack(padx=20)
+
+    no_button.bind("<Enter>", move_button)
+
 
     apply_styles(root)
 
