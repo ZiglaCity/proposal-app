@@ -1,0 +1,1 @@
+This is a simple desktop application built in python with tkinter. It forces users accept my proposal... If you think you can select "NO", try!!!
