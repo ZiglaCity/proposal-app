@@ -1,5 +1,6 @@
 import tkinter as tk
 import random
+import sys
 
 
 #define a fixed style to be used for all the widgets
@@ -68,6 +69,10 @@ def Yes():
     exit_button.pack(pady=50, padx=30)
 
     apply_styles(root)
+
+
+def Exit():
+    sys.exit()
 
 
 def create_gui():
