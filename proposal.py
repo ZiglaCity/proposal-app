@@ -1,4 +1,5 @@
 import tkinter as tk
+import random
 
 
 #define a fixed style to be used for all the widgets
@@ -44,6 +45,15 @@ def apply_styles(widget):
 
     for child in widget.winfo_children():
         apply_styles(child)
+
+
+def move_button(event):
+    width = root.winfo_width()
+    heigth = root.winfo_height()
+    n = random.randint(0, width - no_button.winfo_width())
+    m = random.randint(0, heigth - no_button.winfo_height())
+
+    no_button.place(x=n, y=m)
 
 def create_gui():
     global root, no_button 
